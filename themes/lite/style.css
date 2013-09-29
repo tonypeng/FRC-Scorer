@@ -1,0 +1,107 @@
+/*
+Lite - Fast and minimized style
+Tony Peng
+*/
+
+ * {
+    font-family: 'Trebuchet MS';
+    margin: 0;
+    padding: 0;
+ }
+ 
+ html, body {
+    height: 99%;
+ }
+ 
+ body {
+    display: block;
+    background-color: #EEEEEE; 
+    margin: 8px;
+    font-size: 10pt;
+ }
+ 
+ a {
+    text-decoration: none;
+    color: #0000AA;
+ }
+ 
+ #container {
+    display: block;
+    background-color: #FFFFFF;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+ }
+ 
+ #navbar {
+/*    border: 1px solid #E7E7E7;
+    border-left: none;*/
+
+    border-bottom: 1px solid #000;	
+
+    padding-left: 162px;
+    padding-right: 2px;
+    padding-top: 1px;
+    padding-bottom: 1px;    
+
+    font-size: 16pt;
+    font-weight: bold;
+
+    width: 25%:
+ }
+
+ #navbarpadding {
+    padding-left: 162px;
+    padding-right: 2px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+ }
+
+ #navbar a {
+    color: #0033AA;
+ }
+
+ #navbar a:hover {
+    text-decoration: underline; 
+ }
+ 
+ #breadcrumb {
+    border: 1px solid #E7E7E7;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    
+    font-size: 12pt;
+ }
+ 
+ #utilbar {
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+ }
+ 
+ .bordered {
+    border: 1px solid #E7E7E7;
+ }
+ 
+ .padded1 {
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+ }
+ 
+ .padded2 {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+ }
+ 
+ h6 {
+    font-weight: bold;
+ }
