@@ -5,6 +5,7 @@ function refreshContent()
 	document.getElementById('loading').style.display = 'inline';
 	
 	$('#matches').load('cache/cache_current.html', function() { document.getElementById('loading').style.display = 'none'; });
+    $('#elim_matches_bracket').load('cache/cache_current_elim_bracket.html', function() { document.getElementById('loading').style.display = 'none'; });
 	$('#elim_matches').load('cache/cache_current_elim.html', function() { document.getElementById('loading').style.display = 'none'; });
 	$('#rankings').load('cache/cache_current_rankings.html', function() { document.getElementById('loading').style.display = 'none'; });
 

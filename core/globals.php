@@ -46,9 +46,11 @@ function themeHeader()
 	<meta charset="utf-8" />
 	<title><?php echo $config_site_name; ?></title>
     <link rel="shortcut icon" href="img/shortcut_icon.png" />
+    <link rel="stylesheet" media="screen" type="text/css" href="<?php echo $global_theme_dir; ?>reset.css" />
 	<link rel="stylesheet" media="screen" type="text/css" href="<?php echo $global_theme_dir; ?>style.css" />
+    <link rel="stylesheet" media="screen" type="text/css" href="<?php echo $global_theme_dir; ?>bracket.css" />
 	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/funcs.js"></script>
+	<script type="text/javascript" src="js/git push to a d"></script>
 </head>
 <body>
 <?php

@@ -43,6 +43,9 @@ themeContentBegin();
     <textarea name="data" style="width: 100%;" rows="15"></textarea><br />
     <input type="submit" style="width:  100%;" name="submit" value="Submit" />
 </form>
+<br />
+<h6 id="input_box">Clear Data</h6><br />
+<a href="admin/clear_cache.php" onclick="return confirm('Are you sure?');">Clear All Data</a>
 <?php if(isset($_GET['timestamp'])):?>
 <div id="notice" style="position:fixed; top: 0; left: 0; background-color: #adff2f; width: 100%; text-align: center; vertical-align: middle; display: inline-block;">Successfully updated scores! <?php echo date("h:i A", $_GET['timestamp']); ?><img style="position: absolute; top: 0; right: 0.5%; width: 14px; height: 14px; cursor: pointer;" src="img/red_cross.png" onclick="var div = document.getElementById('notice'); div.parentNode.removeChild(div);" /></div>
 <?php

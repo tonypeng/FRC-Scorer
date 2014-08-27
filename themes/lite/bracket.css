@@ -1,0 +1,26 @@
+.cell
+{
+    width: 16.667%;
+    height: 20px;
+    text-align: center;
+}
+
+.cell.border-bottom
+{
+    border-bottom: 1px solid #000;
+}
+
+.cell.border-left
+{
+    border-left: 1px solid #000;
+}
+
+.cell.border-top
+{
+    border-top: 1px solid #000;
+}
+
+.cell.border-right
+{
+    border-right: 1px solid #000;
+}
