@@ -2,13 +2,13 @@
 /**
  * The MIT License (MIT)
  * Copyright (c) 2012 Tony Peng
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
  * to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
  * and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
  * PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
  * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
@@ -30,9 +30,9 @@ $global_navbar = '';
 function loadTheme($themedir='themes/lite/')
 {
     global $global_theme_dir;
-    
+
     $global_theme_dir = $themedir;
-    
+
     include_once($global_theme_dir . 'theme_core.php');
 }
 
@@ -45,7 +45,7 @@ function themeHeader()
 <head>
 	<meta charset="utf-8" />
 	<title><?php echo $config_site_name; ?></title>
-    <link rel="shortcut icon" href="img/shortcut_icon.png" />
+    <link rel="shortcut icon" href="img/calgames.png" />
     <link rel="stylesheet" media="screen" type="text/css" href="<?php echo $global_theme_dir; ?>reset.css" />
 	<link rel="stylesheet" media="screen" type="text/css" href="<?php echo $global_theme_dir; ?>style.css" />
     <link rel="stylesheet" media="screen" type="text/css" href="<?php echo $global_theme_dir; ?>bracket.css" />
@@ -54,9 +54,9 @@ function themeHeader()
 </head>
 <body>
 <?php
-    
+
     // include_once($global_theme_dir . 'theme_core.php');
-    
+
     theme_header();
 }
 
@@ -78,16 +78,16 @@ function themeSpacer($pixels=1)
 function themeEnd()
 {
     global $global_theme_dir, $start;
-  
-    theme_end();  
-    
+
+    theme_end();
+
 		$after = (date("Y") == "2012") ? "" : " - " . date("Y");
 ?>
 <br />
 <div>Scoring software is &copy; 2012<?php echo $after; ?> <a href="http://tonypeng.com/">Tony Peng</a></div>
 </div>
 <?php
-	
+
     if(isset($start))
     {
 ?>
@@ -110,19 +110,19 @@ function navbarHeader()
 function navbarAdd($append, $page, $isurl=true)
 {
     global $global_navbar;
-    
+
     $append = ($page == '') ? $append : ($isurl ? '<a href="' . $page . '">' : '') . $append . ($isurl ? '</a>' : '');
-    
+
     $global_navbar .= ($global_navbar == '' ? '' : ' &middot; ') . $append;
 }
 
 function navbarEnd()
 {
     global $global_navbar;
-    
+
     # flush breadcrumb
     echo $global_navbar;
-    
+
     theme_navtag_close();
 }
 
@@ -135,28 +135,28 @@ function breadcrumbHeader()
 function breadcrumbAppend($append, $page='')
 {
     global $global_breadcrumbs;
-    
+
     $append = ($page == '') ? $append : '<a href="' . $page . '">' . $append . '</a>';
-    
+
     $global_breadcrumbs .= $append . " &raquo; ";
 }
 
 function breadcrumbEnd()
 {
     global $global_breadcrumbs;
-    
+
     # flush breadcrumb
     echo substr($global_breadcrumbs, 0, strlen($global_breadcrumbs) - 9); // cut off last space and &raquo;
-    
+
     theme_breadcrumb_close();
-    
+
     utilBar();
 }
 
 function isadmin()
 {
     global $config_admin_password;
-    
+
     return (isset($_COOKIE['session']) && sha1($config_admin_password . $_SERVER['REMOTE_ADDR']) == $_COOKIE['session']);
 }
 
@@ -178,7 +178,7 @@ function utilBar()
 <span style="float: right; font-weight: bold;"><a href="admin/logout.php" onclick="return confirm('Are you sure you want to log out?  You will have to log back in to add/edit scores.');">Log out</a></span>
         <?php
     }
-    
+
     theme_utilbar_end();
 }
 ?>
